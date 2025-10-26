@@ -1,11 +1,17 @@
 import React from "react";
-import { Button } from "antd";
+// import { Button } from "antd";
+import Header from "../components/header";
 export function Index(){
     return (
         <>
-            <div>新页面</div>
-            <Button type="primary" size="large">新增</Button>
-            <div className="text-blue text-40px bg-red">小滴课堂</div>
+            <div className="w-full o-hidden">
+                <img className="w-100% h-full" src="https://file.xdclass.net/video/2025/banner/10.1/AI.gif" loading="lazy" />
+            </div>
+            <div className="shadow mb-10px">
+                <div className="w-1200px mx-auto">
+                    <Header> </Header>
+                </div>
+            </div>
         </>
     );
 }
