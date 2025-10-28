@@ -1,6 +1,7 @@
 import { Children } from "react";
 import { DownOutlined } from "@ant-design/icons";
 import { Input } from "antd";
+import Register from "./Register";
 //tab每一项的接口定义。
 interface HeaderItemProps{
     href:string;
@@ -81,6 +82,8 @@ export default function Header(){
         href:"#"
         },
     ]
+    //开关
+    const {switchRegVisible}=useModal();
     // return <div>header</div>
     return <div className="flex items-center gap-2">
         <img  src="https://front.cdn.xdclass.net/images/logo.webp"
@@ -95,8 +98,9 @@ export default function Header(){
             }
         </div>
         <div className="flex items-center justify-center gap-4 children:cursor-pointer">
-            <span>注册</span>
-            <span className="bg-#4d555d c-#fff leading-26px w-60px p-2px text-center">登录</span>
+            <span>登录</span>
+            <span onClick={switchRegVisible} className="bg-#4d555d c-#fff leading-26px w-60px p-2px text-center">注册</span>
         </div>
+        <Register/>
     </div>
 } 

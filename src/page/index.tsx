@@ -1,6 +1,6 @@
 import React from "react";
 // import { Button } from "antd";
-import Header from "../components/header";
+import Header from "../components/Header";
 export function Index(){
     return (
         <>
@@ -9,7 +9,7 @@ export function Index(){
             </div>
             <div className="shadow mb-10px">
                 <div className="w-1200px mx-auto">
-                    <Header> </Header>
+                    <Header></Header>
                 </div>
             </div>
         </>
