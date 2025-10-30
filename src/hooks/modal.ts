@@ -7,7 +7,7 @@ interface ModalState{
     switchRegVisible:()=>void;
     //登录的接口
     loginVisible:boolean;
-    SwitchLoginVisible:()=>void;
+    switchLoginVisible:()=>void;
 
 }
 //修改regVisible的值。
@@ -19,5 +19,5 @@ export const useModal=create<ModalState>((set)=>({
     //实现判断登录接口，
     loginVisible:false,
     //实现登录页面是否出现状态的接口。
-    SwitchLoginVisible:()=>set((state)=>({loginVisible:!state.loginVisible}),false)
+    switchLoginVisible:()=>set((state)=>({loginVisible:!state.loginVisible}),false)
 }));

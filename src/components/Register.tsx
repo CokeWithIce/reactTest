@@ -10,7 +10,7 @@ export default function Register(){
     const [password,setPassword] =useState("");
     const [repassword,setRepassword] =useState("");
     //一个小错误，要设置初始值要不然就会推断为undefined类型。
-    const {regVisible,switchRegVisible}=useModal();
+    const {regVisible,switchRegVisible,switchLoginVisible}=useModal();
     const {register,users}=useUser();
     const handleFinish=()=>{
         if(password!==repassword){
@@ -85,7 +85,10 @@ export default function Register(){
                 <span>
                     已有帐号？
                 </span>
-                <span className="text-blue cursor-pointer">
+                <span onClick={()=>{
+                    switchRegVisible();
+                    switchLoginVisible();
+                }} className="text-blue cursor-pointer">
                     立即登录
                 </span>
             </div>
