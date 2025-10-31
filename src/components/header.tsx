@@ -104,8 +104,10 @@ export default function Header(){
 
     // return <div>header</div>
     return <div className="flex items-center gap-2">
+        {/* 头部logo部分 */}
         <img  src="https://front.cdn.xdclass.net/images/logo.webp"
         className="w-138px h-64px"></img>
+        {/* 导航栏部分 */}
         <div className="flex items-center justify-between flex-[1]">
             {
                 list.map((item,index)=>{
@@ -115,6 +117,7 @@ export default function Header(){
                 })
             }
         </div>
+        {/* 登录入口部分 */}
         {isLogin?(
             <Dropdown menu ={{items}} placement="bottomLeft">
                 <Space>欢迎您，{currentUser||"登录者"}</Space>
